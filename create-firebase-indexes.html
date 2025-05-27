@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Index Creator - BixForge Kids Zone</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .alert {
+            background: #fee2e2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .success {
+            background: #dcfce7;
+            border: 1px solid #bbf7d0;
+            color: #16a34a;
+        }
+        .index-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .index-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .index-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1e293b;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .index-description {
+            color: #64748b;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .create-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+        .create-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        .status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .status.pending {
+            background: #fef3c7;
+            color: #d97706;
+        }
+        .status.created {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+        .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .progress {
+            background: #e5e7eb;
+            border-radius: 10px;
+            height: 20px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .progress-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        .instructions {
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .instructions h3 {
+            color: #1e40af;
+            margin-top: 0;
+        }
+        .instructions ol {
+            color: #1e40af;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 Firebase Index Creator</h1>
+
+        <div class="alert">
+            <strong>⚠️ URGENT:</strong> These Firebase indexes are required to fix the console errors you're seeing. Click each "Create Index" button below to automatically create the required indexes.
+        </div>
+
+        <div class="instructions">
+            <h3>📋 Instructions:</h3>
+            <ol>
+                <li>Click each "Create Index" button below</li>
+                <li>You'll be redirected to Firebase Console</li>
+                <li>Click "Create Index" in Firebase Console</li>
+                <li>Wait for index creation (few minutes to hours)</li>
+                <li>Return here and mark as completed</li>
+                <li>Refresh your main website to verify errors are gone</li>
+            </ol>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p style="text-align: center; color: #64748b; margin-bottom: 30px;">
+            <span id="progressText">0 of 5 indexes created</span>
+        </p>
+
+        <!-- Trending Stories Index -->
+        <div class="index-card">
+            <div class="index-title">
+                <span class="icon">🔥</span>
+                Trending Stories Index
+            </div>
+            <div class="index-description">
+                Required for trending stories queries with isActive, language, priority, and __name__ fields.
+            </div>
+            <a href="https://console.firebase.google.com/v1/r/project/new-project-f8d5e/firestore/indexes?create_composite=Clpwcm9qZWN0cy9uZXctcHJvamVjdC1mOGQ1ZS9kYXRhYmFzZXMvKGRlZmF1bHQpL2NvbGxlY3Rpb25Hcm91cHMvdHJlbmRpbmdfc3Rvcmllcy9pbmRleGVzL18QARoMCghpc0FjdGl2ZRABGgwKCGxhbmd1YWdlEAEaDAoIcHJpb3JpdHkQAhoMCghfX25hbWVfXxAC"
+               target="_blank"
+               class="create-btn"
+               onclick="markAsCreated(this, 'trending')">
+                🚀 Create Trending Stories Index
+            </a>
+            <div class="status pending" id="status-trending">⏳ Pending Creation</div>
+        </div>
+
+        <!-- Videos Index 1 -->
+        <div class="index-card">
+            <div class="index-title">
+                <span class="icon">🎥</span>
+                Videos Index (Admin & Code)
+            </div>
+            <div class="index-description">
+                Required for video queries with disabled, isAdminPost, isCodeVideo, featured, createdAt, and __name__ fields.
+            </div>
+            <a href="https://console.firebase.google.com/v1/r/project/new-project-f8d5e/firestore/indexes?create_composite=ClBwcm9qZWN0cy9uZXctcHJvamVjdC1mOGQ1ZS9kYXRhYmFzZXMvKGRlZmF1bHQpL2NvbGxlY3Rpb25Hcm91cHMvdmlkZW9zL2luZGV4ZXMvXxABGgwKCGRpc2FibGVkEAEaDwoLaXNBZG1pblBvc3QQARoPCgtpc0NvZGVWaWRlbxABGgwKCGZlYXR1cmVkEAIaDQoJY3JlYXRlZEF0EAIaDAoIX19uYW1lX18QAg"
+               target="_blank"
+               class="create-btn"
+               onclick="markAsCreated(this, 'videos1')">
+                🚀 Create Videos Index (Admin & Code)
+            </a>
+            <div class="status pending" id="status-videos1">⏳ Pending Creation</div>
+        </div>
+
+        <!-- Videos Index 2 -->
+        <div class="index-card">
+            <div class="index-title">
+                <span class="icon">🎬</span>
+                Videos Index (Language)
+            </div>
+            <div class="index-description">
+                Required for video queries with disabled, isAdminPost, language, createdAt, and __name__ fields.
+            </div>
+            <a href="https://console.firebase.google.com/v1/r/project/new-project-f8d5e/firestore/indexes?create_composite=ClBwcm9qZWN0cy9uZXctcHJvamVjdC1mOGQ1ZS9kYXRhYmFzZXMvKGRlZmF1bHQpL2NvbGxlY3Rpb25Hcm91cHMvdmlkZW9zL2luZGV4ZXMvXxABGgwKCGRpc2FibGVkEAEaDwoLaXNBZG1pblBvc3QQARoMCghsYW5ndWFnZRABGg0KCWNyZWF0ZWRBdBACGgwKCF9fbmFtZV9fEAI"
+               target="_blank"
+               class="create-btn"
+               onclick="markAsCreated(this, 'videos2')">
+                🚀 Create Videos Index (Language)
+            </a>
+            <div class="status pending" id="status-videos2">⏳ Pending Creation</div>
+        </div>
+
+        <!-- Stories Index -->
+        <div class="index-card">
+            <div class="index-title">
+                <span class="icon">📚</span>
+                Stories Index
+            </div>
+            <div class="index-description">
+                Required for stories queries with disabled, isAdminPost, language, createdAt, and __name__ fields.
+            </div>
+            <a href="https://console.firebase.google.com/v1/r/project/new-project-f8d5e/firestore/indexes?create_composite=ClFwcm9qZWN0cy9uZXctcHJvamVjdC1mOGQ1ZS9kYXRhYmFzZXMvKGRlZmF1bHQpL2NvbGxlY3Rpb25Hcm91cHMvc3Rvcmllcy9pbmRleGVzL18QARoMCghkaXNhYmxlZBABGg8KC2lzQWRtaW5Qb3N0EAEaDAoIbGFuZ3VhZ2UQARoNCgljcmVhdGVkQXQQAhoMCghfX25hbWVfXxAC"
+               target="_blank"
+               class="create-btn"
+               onclick="markAsCreated(this, 'stories')">
+                🚀 Create Stories Index
+            </a>
+            <div class="status pending" id="status-stories">⏳ Pending Creation</div>
+        </div>
+
+        <!-- Blog Posts Index -->
+        <div class="index-card">
+            <div class="index-title">
+                <span class="icon">📰</span>
+                Blog Posts Index
+            </div>
+            <div class="index-description">
+                Required for blog posts queries with isPublished, language, publishedAt, and __name__ fields.
+            </div>
+            <a href="https://console.firebase.google.com/v1/r/project/new-project-f8d5e/firestore/indexes?create_composite=ClRwcm9qZWN0cy9uZXctcHJvamVjdC1mOGQ1ZS9kYXRhYmFzZXMvKGRlZmF1bHQpL2NvbGxlY3Rpb25Hcm91cHMvYmxvZ19wb3N0cy9pbmRleGVzL18QARoPCgtpc1B1Ymxpc2hlZBABGgwKCGxhbmd1YWdlEAEaDwoLcHVibGlzaGVkQXQQAhoMCghfX25hbWVfXxAC"
+               target="_blank"
+               class="create-btn"
+               onclick="markAsCreated(this, 'blog')">
+                🚀 Create Blog Posts Index
+            </a>
+            <div class="status pending" id="status-blog">⏳ Pending Creation</div>
+        </div>
+
+        <div class="alert success" id="completionMessage" style="display: none;">
+            <strong>🎉 All indexes created!</strong> Your Firebase queries should now work without errors. Refresh your main website to verify.
+        </div>
+    </div>
+
+    <script>
+        let createdCount = 0;
+        const totalIndexes = 5;
+
+        function markAsCreated(button, indexType) {
+            setTimeout(() => {
+                const statusElement = document.getElementById(`status-${indexType}`);
+                statusElement.textContent = '✅ Created Successfully';
+                statusElement.className = 'status created';
+                button.textContent = '✅ Index Created';
+                button.style.background = '#16a34a';
+                button.onclick = null;
+
+                createdCount++;
+                updateProgress();
+            }, 2000);
+        }
+
+        function updateProgress() {
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+            const completionMessage = document.getElementById('completionMessage');
+
+            const percentage = (createdCount / totalIndexes) * 100;
+            progressBar.style.width = percentage + '%';
+            progressText.textContent = `${createdCount} of ${totalIndexes} indexes created`;
+
+            if (createdCount === totalIndexes) {
+                completionMessage.style.display = 'block';
+            }
+        }
+
+        // Check if indexes were already created (from localStorage)
+        window.onload = function() {
+            const indexes = ['trending', 'videos1', 'videos2', 'stories', 'blog'];
+            indexes.forEach(indexType => {
+                if (localStorage.getItem(`firebase-index-${indexType}`) === 'created') {
+                    const statusElement = document.getElementById(`status-${indexType}`);
+                    const button = document.querySelector(`[onclick*="${indexType}"]`);
+                    if (statusElement && button) {
+                        statusElement.textContent = '✅ Created Successfully';
+                        statusElement.className = 'status created';
+                        button.textContent = '✅ Index Created';
+                        button.style.background = '#16a34a';
+                        button.onclick = null;
+                        createdCount++;
+                    }
+                }
+            });
+            updateProgress();
+        };
+
+        // Save to localStorage when marked as created
+        function markAsCreated(button, indexType) {
+            localStorage.setItem(`firebase-index-${indexType}`, 'created');
+            setTimeout(() => {
+                const statusElement = document.getElementById(`status-${indexType}`);
+                statusElement.textContent = '✅ Created Successfully';
+                statusElement.className = 'status created';
+                button.textContent = '✅ Index Created';
+                button.style.background = '#16a34a';
+                button.onclick = null;
+
+                createdCount++;
+                updateProgress();
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

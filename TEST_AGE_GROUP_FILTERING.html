@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 Age Group Filtering Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+        }
+        .test-section {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .success {
+            background: rgba(34, 197, 94, 0.3);
+            border-left: 4px solid #22c55e;
+        }
+        .error {
+            background: rgba(239, 68, 68, 0.3);
+            border-left: 4px solid #ef4444;
+        }
+        .warning {
+            background: rgba(245, 158, 11, 0.3);
+            border-left: 4px solid #f59e0b;
+        }
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        .link-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            margin: 5px;
+            transition: transform 0.2s;
+        }
+        .link-button:hover {
+            transform: translateY(-2px);
+        }
+        .age-group-demo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .age-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        .sample-content {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Age Group Filtering Test</h1>
+        <p>Testing age group filtering for regular stories and videos</p>
+    </div>
+
+    <div class="container">
+        <h2>📊 Current Status Check</h2>
+        
+        <div class="test-section">
+            <h3>🔍 Problem Analysis</h3>
+            <p><strong>Issue:</strong> Regular stories not showing age group filtering on main website</p>
+            <p><strong>Expected:</strong> Both regular stories and videos should show age group sections</p>
+            <p><strong>Current:</strong> Videos show age groups, stories might not</p>
+        </div>
+
+        <div class="test-section">
+            <h3>🎯 Quick Test Actions</h3>
+            <a href="http://localhost:8080/kidz-zone-admin/index.html" target="_blank" class="link-button">
+                🔧 Open Admin Dashboard
+            </a>
+            <a href="http://localhost:3000" target="_blank" class="link-button">
+                🏠 Open Main Website
+            </a>
+            <a href="http://localhost:3000/stories" target="_blank" class="link-button">
+                📚 Open Stories Page
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>📝 Step-by-Step Solution</h2>
+        
+        <div class="test-section">
+            <h3><span style="background: #667eea; color: white; border-radius: 50%; padding: 5px 10px; margin-right: 10px;">1</span>Add Sample Regular Stories</h3>
+            <p>Add regular stories with different age groups in admin dashboard:</p>
+            <div class="age-group-demo">
+                <div class="age-card">
+                    <h4>👶 Ages 0-3</h4>
+                    <p>Add a simple story for toddlers</p>
+                    <small>Category: Bedtime, Language: English</small>
+                </div>
+                <div class="age-card">
+                    <h4>🧒 Ages 3-6</h4>
+                    <p>Add a fun story for preschoolers</p>
+                    <small>Category: Adventure, Language: English</small>
+                </div>
+                <div class="age-card">
+                    <h4>👦 Ages 6-9</h4>
+                    <p>Add an educational story</p>
+                    <small>Category: Educational, Language: English</small>
+                </div>
+                <div class="age-card">
+                    <h4>👧 Ages 9-12</h4>
+                    <p>Add a complex story</p>
+                    <small>Category: Adventure, Language: English</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3><span style="background: #667eea; color: white; border-radius: 50%; padding: 5px 10px; margin-right: 10px;">2</span>Add Sample Regular Videos</h3>
+            <p>Add regular videos with different age groups for comparison:</p>
+            <div class="sample-content">
+Sample Video Data:
+- Title: "Fun Learning Video for Toddlers"
+- Age Group: 0-3
+- Category: Educational
+- YouTube URL: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+- Title: "Adventure Story Video"
+- Age Group: 6-9  
+- Category: Adventure
+- YouTube URL: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3><span style="background: #667eea; color: white; border-radius: 50%; padding: 5px 10px; margin-right: 10px;">3</span>Test Age Group Filtering</h3>
+            <p>After adding content, test the filtering:</p>
+            <ol>
+                <li>Go to main website: <a href="http://localhost:3000" target="_blank" style="color: #fbbf24;">localhost:3000</a></li>
+                <li>Use the age group filter dropdown</li>
+                <li>Select different age groups (0-3, 3-6, 6-9, 9-12)</li>
+                <li>Verify both stories and videos filter correctly</li>
+                <li>Check that age group headers appear for both sections</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <h3><span style="background: #667eea; color: white; border-radius: 50%; padding: 5px 10px; margin-right: 10px;">4</span>Verify Stories Page</h3>
+            <p>Test the dedicated stories page:</p>
+            <ol>
+                <li>Go to stories page: <a href="http://localhost:3000/stories" target="_blank" style="color: #fbbf24;">localhost:3000/stories</a></li>
+                <li>Use the age group filter</li>
+                <li>Verify stories are grouped by age</li>
+                <li>Check that age group headers show "Ages 0-3", "Ages 3-6", etc.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>🔧 Technical Analysis</h2>
+        
+        <div class="test-section">
+            <h3>📋 Component Comparison</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <h4>📚 StoriesList Component</h4>
+                    <div class="sample-content">
+✅ Has age group filtering (line 84)
+✅ Groups by age (lines 88-97)
+✅ Shows age headers (lines 135-137)
+✅ Sorts age groups (lines 100-103)
+
+Expected output:
+- "Ages 0-3" section
+- "Ages 3-6" section  
+- "Ages 6-9" section
+- "Ages 9-12" section
+                    </div>
+                </div>
+                <div>
+                    <h4>🎥 VideosList Component</h4>
+                    <div class="sample-content">
+✅ Has age group filtering
+✅ Groups by age (lines 65-73)
+✅ Shows age headers (line 87)
+✅ Sorts age groups (lines 76-79)
+
+Expected output:
+- "0-3" section
+- "3-6" section
+- "6-9" section  
+- "9-12" section
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h3>🎯 Likely Causes</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
+                <div class="age-card">
+                    <h4>❌ No Data</h4>
+                    <p>No regular stories added to admin dashboard yet</p>
+                    <small>Solution: Add sample stories</small>
+                </div>
+                <div class="age-card">
+                    <h4>❌ Wrong Age Format</h4>
+                    <p>Age groups not in expected format</p>
+                    <small>Solution: Use "0-3", "3-6", "6-9", "9-12"</small>
+                </div>
+                <div class="age-card">
+                    <h4>❌ Disabled Content</h4>
+                    <p>Stories marked as disabled in admin</p>
+                    <small>Solution: Enable stories in admin</small>
+                </div>
+                <div class="age-card">
+                    <h4>❌ Sync Issue</h4>
+                    <p>Admin content not syncing to main site</p>
+                    <small>Solution: Use sync button in admin</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>✅ Expected Results</h2>
+        
+        <div class="test-section success">
+            <h3>🎯 After Adding Content</h3>
+            <p><strong>Main Website (localhost:3000):</strong></p>
+            <ul>
+                <li>✅ Stories section shows "Ages 0-3", "Ages 3-6", etc. headers</li>
+                <li>✅ Videos section shows "0-3", "3-6", etc. headers</li>
+                <li>✅ Age group filter works for both sections</li>
+                <li>✅ Content appears under correct age groups</li>
+            </ul>
+            
+            <p><strong>Stories Page (localhost:3000/stories):</strong></p>
+            <ul>
+                <li>✅ Age group filter dropdown works</li>
+                <li>✅ Stories grouped by age with clear headers</li>
+                <li>✅ Filtering shows only selected age group</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>🚀 Quick Fix Instructions</h2>
+        
+        <div class="test-section">
+            <h3>📝 Immediate Action Plan</h3>
+            <ol style="font-size: 1.1em; line-height: 1.6;">
+                <li><strong>Open Admin Dashboard:</strong> <a href="http://localhost:8080/kidz-zone-admin/index.html" target="_blank" style="color: #fbbf24;">Click here</a></li>
+                <li><strong>Go to "Regular Stories" tab</strong></li>
+                <li><strong>Click "Add Regular Story"</strong></li>
+                <li><strong>Fill in:</strong>
+                    <ul>
+                        <li>Title: "Sample Story for Toddlers"</li>
+                        <li>Age Group: Select "0-3"</li>
+                        <li>Category: "Bedtime"</li>
+                        <li>Language: "English"</li>
+                        <li>Description: "A simple bedtime story"</li>
+                        <li>Content: "Once upon a time..."</li>
+                    </ul>
+                </li>
+                <li><strong>Click "Add Regular Story"</strong></li>
+                <li><strong>Repeat for other age groups (3-6, 6-9, 9-12)</strong></li>
+                <li><strong>Click "Local Sync" button</strong></li>
+                <li><strong>Go to main website:</strong> <a href="http://localhost:3000" target="_blank" style="color: #fbbf24;">localhost:3000</a></li>
+                <li><strong>Check if stories now show age group headers!</strong></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>🎉 Success Verification</h2>
+        <div class="test-section">
+            <p style="text-align: center; font-size: 1.2em;">
+                <strong>You'll know it's working when you see:</strong><br>
+                📚 Stories section with "Ages 0-3", "Ages 3-6" headers<br>
+                🎥 Videos section with age group headers<br>
+                🔄 Age filter dropdown affects both sections<br>
+                ✨ Content properly organized by age groups
+            </p>
+        </div>
+    </div>
+</body>
+</html>
