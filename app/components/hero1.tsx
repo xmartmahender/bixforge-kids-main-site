@@ -1,18 +1,21 @@
 "use client"; // Mark this component as a Client Component
 
-import React, { useMemo } from 'react';
-import { motion } from 'framer-motion'; // Import framer-motion
+import React, { useMemo } from "react";
+import { motion } from "framer-motion"; // Import framer-motion
 
 const Hero1 = () => {
   // Generate fixed star positions to avoid hydration mismatch
   const starPositions = useMemo(() => {
     const positions = [];
-    const fixedSeeds = [0.1, 0.3, 0.7, 0.2, 0.8, 0.4, 0.9, 0.15, 0.65, 0.35, 0.75, 0.25, 0.85, 0.45, 0.95];
+    const fixedSeeds = [
+      0.1, 0.3, 0.7, 0.2, 0.8, 0.4, 0.9, 0.15, 0.65, 0.35, 0.75, 0.25, 0.85,
+      0.45, 0.95,
+    ];
 
     for (let i = 0; i < 15; i++) {
       positions.push({
-        top: `${(fixedSeeds[i] * 90 + 5)}%`, // 5% to 95%
-        left: `${(fixedSeeds[(i + 7) % 15] * 90 + 5)}%`, // 5% to 95%
+        top: `${fixedSeeds[i] * 90 + 5}%`, // 5% to 95%
+        left: `${fixedSeeds[(i + 7) % 15] * 90 + 5}%`, // 5% to 95%
       });
     }
     return positions;
@@ -69,11 +72,31 @@ const Hero1 = () => {
         initial="hidden"
         animate="visible"
       >
-        <img
-          src="https://www.abcbooksmarket.com/image/cache/catalog/Books/Shanti/Shanti25-500x500.jpg"
-          alt="Kids Reading"
+        {/* <video
+          src="/assets/images/videoplayback.mp4"
+          alt="Kids video"
           className="w-full h-full object-cover opacity-20" // Reduced opacity
+        /> */}
+        <video
+          src="/assets/images/videoplayback.mp4"
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-40 pointer-events-none z-0"
+          autoPlay
+          muted
+          loop
+          playsInline
         />
+
+        {/* <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+  <iframe
+    src="https://www.youtube.com/embed/ibpP7w5MY_o?autoplay=1&mute=1&loop=1&playlist=ibpP7w5MY_o&controls=0&modestbranding=1&showinfo=0"
+    title="Kids Reading Background"
+    allow="autoplay; fullscreen"
+    allowFullScreen
+    frameBorder="0"
+    className="absolute top-0 left-0 w-full h-full object-cover opacity-60 pointer-events-none"
+  />
+</div> */}
+
         {/* Subtle Overlay to Improve Readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-100/50 to-indigo-100/50"></div>
       </motion.div>
@@ -105,7 +128,7 @@ const Hero1 = () => {
           <motion.h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-indigo-900"
             variants={itemVariants}
-            style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}
+            style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
           >
             Reading for all!
           </motion.h1>
@@ -114,9 +137,10 @@ const Hero1 = () => {
           <motion.p
             className="text-xl md:text-2xl lg:text-3xl text-gray-800"
             variants={itemVariants}
-            style={{ fontSize: 'clamp(1rem, 3vw, 1.75rem)' }}
+            style={{ fontSize: "clamp(1rem, 3vw, 1.75rem)" }}
           >
-            Discover the world of books and stories with Epic. Perfect for educators, families, and kids alike.
+            Discover the world of books and stories with Epic. Perfect for
+            educators, families, and kids alike.
           </motion.p>
 
           {/* Call-to-Action Buttons */}
