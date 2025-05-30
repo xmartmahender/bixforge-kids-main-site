@@ -79,7 +79,7 @@ const Hero1 = () => {
         /> */}
         <video
           src="/assets/images/videoplayback.mp4"
-          className="absolute top-0 left-0 w-full h-full object-cover opacity-40 pointer-events-none z-0"
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-100 pointer-events-none z-0"
           autoPlay
           muted
           loop
@@ -98,7 +98,8 @@ const Hero1 = () => {
 </div> */}
 
         {/* Subtle Overlay to Improve Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-100/50 to-indigo-100/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-100/30 to-indigo-100/30"></div>
+
       </motion.div>
 
       {/* Animated Stars */}
