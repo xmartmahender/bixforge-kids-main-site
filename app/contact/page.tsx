@@ -208,7 +208,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">Email Us</h4>
-                      <p className="text-gray-600">support@kidzzone.com</p>
+                      <p className="text-gray-600">kindercode1@gmail.com</p>
                       <p className="text-sm text-gray-500">We respond within 24 hours</p>
                     </div>
                   </div>
