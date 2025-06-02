@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import Link from "next/link";
 import {
   FaFacebookF,
@@ -9,18 +10,22 @@ import {
   FaYoutube,
   FaHeart,
   FaEnvelope,
-  FaPhone,
+  // FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { AiFillTikTok } from "react-icons/ai";
+import { FaPinterest } from "react-icons/fa";
 
 const Footer = () => {
 
   const socialLinks = [
-    { name: 'Facebook', icon: FaFacebookF, url: 'https://facebook.com', color: 'hover:text-blue-500' },
-    { name: 'Twitter', icon: FaTwitter, url: 'https://twitter.com', color: 'hover:text-blue-400' },
-    { name: 'Instagram', icon: FaInstagram, url: 'https://instagram.com', color: 'hover:text-pink-500' },
-    { name: 'LinkedIn', icon: FaLinkedinIn, url: 'https://linkedin.com', color: 'hover:text-blue-600' },
-    { name: 'YouTube', icon: FaYoutube, url: 'https://youtube.com', color: 'hover:text-red-500' },
+    { name: 'Facebook', icon: FaFacebookF, url: 'https://www.facebook.com/profile.php?id=61576850133899', color: 'hover:text-blue-500' },
+    { name: 'Twitter', icon: FaTwitter, url: 'https://x.com/CodeKinder', color: 'hover:text-blue-400' },
+    { name: 'Instagram', icon: FaInstagram, url: 'https://www.instagram.com/kindercode1/', color: 'hover:text-pink-500' },
+    { name: 'LinkedIn', icon: FaLinkedinIn, url: 'https://www.linkedin.com/company/kindercode/', color: 'hover:text-blue-600' },
+    { name: 'YouTube', icon: FaYoutube, url: 'https://www.youtube.com/@KinderCode1', color: 'hover:text-red-500' },
+    { name: 'TikTok', icon: AiFillTikTok, url: 'https://www.tiktok.com/@kindercode7', color: 'hover:text-red-500' },
+    { name: 'YouTube', icon: FaPinterest, url: 'https://www.pinterest.com/kindercode1/', color: 'hover:text-red-500' },
   ];
 
   const quickLinks = [
@@ -56,18 +61,37 @@ const Footer = () => {
 
           {/* Brand section */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-3 mb-6 group">
+            {/* <Link href="/" className="flex items-center space-x-3 mb-6 group">
               <div className="relative">
                 <span className="text-4xl">🌟</span>
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
               </div>
               <div>
                 <span className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-                  BixForge Solutions
+                  Kinder Code
                 </span>
                 <p className="text-sm text-purple-200 mt-1">Learning Made Fun!</p>
               </div>
-            </Link>
+            </Link> */}
+
+            <Link href="/" className="flex items-center space-x-3 mb-6 group">
+  <div className="relative w-12 h-12">
+    <Image
+      src="/assets/images/kinder-code.jpeg"
+      alt="logo image"
+      fill
+      className="object-cover rounded-full"
+    />
+    <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+  </div>
+  <div>
+    <span className="text-3xl font-bold bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
+      Kinder Code
+    </span>
+    <p className="text-sm text-purple-200 mt-1">Learning Made Fun!</p>
+  </div>
+</Link>
+
 
             <p className="text-purple-200 text-sm leading-relaxed mb-4">
               Creating magical learning experiences for children through interactive stories,
@@ -132,12 +156,12 @@ const Footer = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-purple-200 text-sm">
                 <FaEnvelope className="mr-3 text-yellow-400" />
-                <span>hello@bixforge.com</span>
+                <span>kindercode1@gmail.com</span>
               </div>
-              <div className="flex items-center text-purple-200 text-sm">
+              {/* <div className="flex items-center text-purple-200 text-sm">
                 <FaPhone className="mr-3 text-yellow-400" />
                 <span>+1 (555) 123-KIDS</span>
-              </div>
+              </div> */}
               <div className="flex items-center text-purple-200 text-sm">
                 <FaMapMarkerAlt className="mr-3 text-yellow-400" />
                 <span>BixForge Solutions HQ</span>
@@ -178,7 +202,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-purple-200 text-sm">
-                © 2025 BixForge Solutions — Kidz Zone. All rights reserved.
+                © 2025 Kinder Code — Kidz Zone. All rights reserved.
               </p>
               <p className="text-purple-300 text-xs mt-1">
                 Empowering young minds through technology and creativity
@@ -190,7 +214,7 @@ const Footer = () => {
               <FaHeart className="text-pink-400 animate-pulse" />
               <span>by</span>
               <span className="text-yellow-400 font-bold">
-                BixForge Solutions
+                Kinder Code
               </span>
             </div>
           </div>

@@ -140,8 +140,8 @@ const Hero1 = () => {
             variants={itemVariants}
             style={{ fontSize: "clamp(1rem, 3vw, 1.75rem)" }}
           >
-            Discover the world of books and stories with Epic. Perfect for
-            educators, families, and kids alike.
+            Discover the world of stories with Epic. Perfect for
+            learn coding or kids alike.
           </motion.p>
 
           {/* Call-to-Action Buttons */}
@@ -155,7 +155,7 @@ const Hero1 = () => {
               whileHover={{ scale: 1.1 }} // Increased hover effect
               whileTap={{ scale: 0.95 }} // Button click animation
             >
-              For Educators
+              For Learners
             </motion.a>
             <motion.a
               href="/families"

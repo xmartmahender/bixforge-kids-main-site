@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useLanguage, LANGUAGES, Language } from '../contexts/LanguageContext';
 import SearchEngine from './SearchEngine';
 import { FaSearch, FaGlobe, FaChevronDown } from 'react-icons/fa';
+import Image from 'next/image';
 
 interface MainNavigationProps {
   isScrolled: boolean;
@@ -43,7 +44,7 @@ export default function MainNavigation({ isScrolled }: MainNavigationProps) {
     <nav className="relative">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <Link
+        {/* <Link
           href="/"
           className={`
             flex items-center space-x-3 text-2xl font-bold transition-all duration-300
@@ -54,13 +55,37 @@ export default function MainNavigation({ isScrolled }: MainNavigationProps) {
           `}
         >
           <div className="relative">
-            <span className="text-3xl">🌟</span>
+            <span><Image src="/assets/images/kinder-code.jpeg" alt='logo image' width={12} height={12} /></span>
             <div className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
           </div>
           <span className="bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent font-extrabold">
-            BixForge Solutions
+            Kinder Code
           </span>
-        </Link>
+        </Link> */}
+
+       <Link
+  href="/"
+  className={`flex items-center space-x-3 text-2xl font-bold transition-all duration-300
+    ${isScrolled
+      ? 'text-purple-700 hover:text-purple-800'
+      : 'text-white hover:text-yellow-200'
+    }
+  `}
+>
+  <div className="relative w-12 h-12">
+    <Image
+      src="/assets/images/kinder-code.jpeg"
+      alt="logo image"
+      fill
+      className="object-cover rounded-full"
+    />
+    <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+  </div>
+  <span className="bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent font-extrabold">
+    Kinder Code
+  </span>
+</Link>
+
 
         {/* Mobile menu button */}
         <button
