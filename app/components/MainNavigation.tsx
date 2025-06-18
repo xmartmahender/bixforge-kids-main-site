@@ -74,15 +74,15 @@ export default function MainNavigation({ isScrolled }: MainNavigationProps) {
 >
   <div className="relative w-12 h-12">
     <Image
-      src="/assets/images/kinder-code.jpeg"
+      src="/assets/images/kinder-code1.png"
       alt="logo image"
       fill
       className="object-cover rounded-full"
     />
-    <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
+    <div className="absolute -top-1 -right-1 w-6 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
   </div>
   <span className="bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent font-extrabold">
-    Kinder Code
+   
   </span>
 </Link>
 

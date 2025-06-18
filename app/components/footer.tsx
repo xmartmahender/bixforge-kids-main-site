@@ -77,7 +77,7 @@ const Footer = () => {
             <Link href="/" className="flex items-center space-x-3 mb-6 group">
   <div className="relative w-12 h-12">
     <Image
-      src="/assets/images/kinder-code.jpeg"
+      src="/assets/images/kinder-code1.png"
       alt="logo image"
       fill
       className="object-cover rounded-full"
@@ -156,7 +156,7 @@ const Footer = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-purple-200 text-sm">
                 <FaEnvelope className="mr-3 text-yellow-400" />
-                <span>kindercode1@gmail.com</span>
+                <span>kindercode.io@gmail.com</span>
               </div>
               {/* <div className="flex items-center text-purple-200 text-sm">
                 <FaPhone className="mr-3 text-yellow-400" />
